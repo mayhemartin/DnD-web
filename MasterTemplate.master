@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterTemplate.master.cs" Inherits="MasterTemplate" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>D&D - CM - Expanded</title>
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+    function clearText(field) {
+        if (field.defaultValue == field.value) field.value = '';
+        else if (field.value == '') field.value = field.defaultValue;
+    }
+</script>
+</head>
+<body onload="currentLocation()">
+
+<div id="templatemo_wrapper_01">
+<div id="templatemo_wrapper_02">
+
+    <div id="templatemo_header">
+    	<div id="site_title">
+            <img src="images/dnd.jpg" alt="Dungeons & Dragons" style="float:left; padding-top:20px;"/>
+        </div>
+        
+        <div id="header_right">            
+            <div id="search_box">
+                <form action="#" method="get">
+                    <input type="text" value="Enter a keyword here..." name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                  <input type="submit" name="Search" value="" id="searchbutton" title="Search" />
+                </form>
+            </div>
+            <br /><br /><br />
+            <div id="templatemo_menu">
+                <ul>
+                    <li><a href="#" class="current">TAMU-CC</a></li>
+                    <li><a href="#">Archives</a></li>
+                    <li><a href="http://www.aegisoft.be/costa/data/roleplay/D&D%203.5%20-%20Players%20Handbook%20%5BOEF%5D.pdf">Player Handbook</a></li>
+                    <li><a href="http://www.protonfish.com/dcalc/">Stat Calculator</a></li>
+                    <li><a href="mailto:jmartin1@islander.tamucc.edu" class="last">Contact</a></li>
+                </ul>    	
+            </div> <!-- end of templatemo_menu -->        
+        </div>
+    </div> <!-- end of templatemo_header -->
+    
+    
+    <div id="templatemo_main">    	
+        <div id="templatemo_content_wrapper">
+        <div id="templatemo_content_top"></div>
+        <div id="templatemo_content">
+            
+            <div class=content_box">
+                <asp:ContentPlaceHolder ID="Character_Creation" runat="server">
+            
+                </asp:ContentPlaceHolder>
+            </div>
+            
+            <div class="content_box">
+            </div>
+            
+			<div class="content_box">
+            </div>	
+            
+
+        </div> <!-- end of content -->
+        <div id="templatemo_content_bottom"></div>
+        </div> <!-- end of content wrapper -->
+        
+        <div id="templatemo_sidebar">
+        	<div class="sidebar_box_wrapper" style="text-align:center;">
+                <div class="sidebar_box" style="width: 15%; text-align: center;">
+                    <div class="sb_title" style="width: 70%; margin-left:-40px;"><img src="images/categories.png" alt="Character Stats"/></div>
+                    <div class="sb_content" style="margin-top: -20px; margin-left:-60px;">
+                        <asp:ContentPlaceHolder ID="Stats" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </div>
+			</div>			
+  			<div align="center">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+        </div> <!-- end of sidebar -->
+    
+    	<!--<div class="clear"></div>-->
+    </div> <!-- end of main -->
+    
+    <div id="templatemo_footer">
+    	Copyright © 2012 <a href="#">Your Company Name</a> | 
+		<a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a>
+    </div> 
+<div style="text-align: center; font-size: 0.75em;">Design Downloaded from <a href="http://www.template4all.com/">free CSS templates</a> | <a href="http://www.freethemes4all.com/">free website templates</a> | <a href="http://www.seodesign.us/" title="free wallpapers hd" target="_blank">Free Wallpapers HD</a>.</div>
+ <!-- end of footer -->   
+</div> <!-- end of wrapper 02 -->
+</div> <!-- end of wrapper 01 -->
+
+</body>
+</html>
